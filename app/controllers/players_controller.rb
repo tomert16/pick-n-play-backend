@@ -7,8 +7,18 @@ class PlayersController < ApplicationController
 
     def create 
         new_player = Player.create!(player_params)
-        # session[:player_id] = new_player.id
+        session[:player_id] = new_player.id
         render json: new_player, status: :created
+    end
+
+    def show
+        player = Player.find(params[:id])
+        render json: player
+    end
+    
+
+    def me
+        render json: current_user, status: :ok
     end
 
 

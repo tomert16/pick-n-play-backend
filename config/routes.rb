@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
-  get 'sessions/destroy'
+  resources :meet_ups
+  resources :fields
+  resources :sports, only: [:index, :show]
   resources :players
   
   ## POST route for signup
