@@ -13,12 +13,12 @@ class PlayersController < ApplicationController
 
     def show
         player = Player.find(params[:id])
-        render json: player
+        render json: player, serializer: IndividualPlayerSerializer
     end
     
 
     def me
-        render json: current_user, status: :ok
+        render json: current_user, status: :ok, serializer: IndividualPlayerSerializer
     end
 
 

@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_22_161221) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_27_210313) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "fields", force: :cascade do |t|
     t.string "field_name"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +32,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_161221) do
     t.integer "sport_id"
     t.index ["field_id"], name: "index_meet_ups_on_field_id"
     t.index ["player_id"], name: "index_meet_ups_on_player_id"
+  end
+
+  create_table "player_meet_ups", force: :cascade do |t|
+    t.bigint "player_id", null: false
+    t.bigint "meet_up_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meet_up_id"], name: "index_player_meet_ups_on_meet_up_id"
+    t.index ["player_id"], name: "index_player_meet_ups_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -51,4 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_161221) do
 
   add_foreign_key "meet_ups", "fields"
   add_foreign_key "meet_ups", "players"
+  add_foreign_key "player_meet_ups", "meet_ups"
+  add_foreign_key "player_meet_ups", "players"
 end

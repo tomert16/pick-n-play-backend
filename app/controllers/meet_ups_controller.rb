@@ -1,4 +1,5 @@
 class MeetUpsController < ApplicationController
+    wrap_parameters format: []
     def index 
         render json: MeetUp.all
     end
@@ -13,9 +14,20 @@ class MeetUpsController < ApplicationController
         render json: new_meet_up, status: :created
     end
 
+    def join_meet_up
+        render json: PlayerMeetUp.create!(player_meet_up_params), status: :accepted
+    end
+
+    def drop_meet_up
+        render json: PlayerMeetUp.destroy_by(player_meet_up_params), status: :no_content
+    end
+
     private 
 
     def meet_up_params
         params.permit(:sport_id, :date, :field_id, :player_id)
+    end
+    def player_meet_up_params
+        params.permit(:meet_up_id, :player_id)
     end
 end
