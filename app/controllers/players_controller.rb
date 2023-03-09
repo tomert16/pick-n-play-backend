@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
     wrap_parameters format: []
+    skip_before_action :authorized, only: [:create, :index]
 
     def index 
         render json: Player.all
@@ -18,7 +19,7 @@ class PlayersController < ApplicationController
     
 
     def me
-        render json: current_user, status: :ok, serializer: IndividualPlayerSerializer
+        render json: current_user,  serializer: IndividualPlayerSerializer, status: :ok
     end
 
 

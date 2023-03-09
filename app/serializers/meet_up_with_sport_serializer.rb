@@ -20,7 +20,10 @@ class MeetUpWithSportSerializer < ActiveModel::Serializer
     }
   end
   def sport
-    object.sport.sport_type
+    {
+      "type": object.sport.sport_type,
+      "image": object.sport.img_url
+    }
   end
 
   def teammates 
