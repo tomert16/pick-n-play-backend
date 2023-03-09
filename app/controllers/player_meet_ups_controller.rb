@@ -3,7 +3,7 @@ class PlayerMeetUpsController < ApplicationController
         render json: PlayerMeetUp.all, status: :ok
     end
 
-    def join_meet_up
+    def create
         render json: PlayerMeetUp.create!(player_meet_up_params), status: :accepted
     end
 
