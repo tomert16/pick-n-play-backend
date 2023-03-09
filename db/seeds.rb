@@ -12,10 +12,10 @@ olivia = Player.create(first_name: "Olivia", last_name: "Radick", email: "olivia
 tomer = Player.create(first_name: "Tomer", last_name: "Tal", email: "tomer@gmail.com", password: "610tt")
 
 puts "⚽🏀🎾 Seeding sports..."
-soccer = Sport.create(sport_type: "Soccer", img_url:"https://www.pngitem.com/pimgs/m/106-1068125_soccer-ball-player-kicking-clip-art-playing-clipart.png", bg_img: "https://img.freepik.com/premium-photo/football-stadium-shiny-lights-view-from-field-grass-turf-nobody-playground-tribunes-with-game-fans-space_266732-6129.jpg?size=626&ext=jpg&ga=GA1.2.1885558603.1678141569&semt=ais")
-bball = Sport.create(sport_type: "Basketball", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzltOtGCLaW06Pr6MIu2imTH0yi6r3BLD17A&usqp=CAU", bg_img:"https://img.freepik.com/free-photo/basketball-court-with-people-fan-sport-arena-render-3d-illustration_654080-1445.jpg?size=626&ext=jpg&ga=GA1.2.1885558603.1678141569&semt=ais")
-tennis = Sport.create(sport_type: "Tennis", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-WJHvkNHb-px3rFWlviZ0LuXsJbqjQSR3w&usqp=CAU", bg_img: "https://media.istockphoto.com/id/1176735816/photo/blue-tennis-court-and-illuminated-indoor-arena-with-fans-upper-front-view.jpg?s=612x612&w=0&k=20&c=er_NtUH-Rv4Kj9mUPOa1C2EwM0rL3YwXwazshoXjvVA=")
-football = Sport.create(sport_type: "Football", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEEX7peJt2XziaC9IVftEVJh2HFXl9Bjtz4g&usqp=CAU", bg_img: "https://img.freepik.com/free-vector/realistic-american-football-stadium_52683-54053.jpg?size=626&ext=jpg&ga=GA1.2.1885558603.1678141569&semt=ais")
+soccer = Sport.create(sport_type: "Soccer", img_url:"https://www.pngitem.com/pimgs/m/106-1068125_soccer-ball-player-kicking-clip-art-playing-clipart.png", bg_img: "https://i.pinimg.com/originals/96/b2/44/96b2445f75d1338341636a63e5cd26b7.jpg")
+bball = Sport.create(sport_type: "Basketball", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzltOtGCLaW06Pr6MIu2imTH0yi6r3BLD17A&usqp=CAU", bg_img:"https://i.pinimg.com/originals/3c/f0/27/3cf027200a07c0da6fcfa75b131aef7d.jpg")
+tennis = Sport.create(sport_type: "Tennis", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr-WJHvkNHb-px3rFWlviZ0LuXsJbqjQSR3w&usqp=CAU", bg_img: "https://wallpaperaccess.com/full/1507858.jpg")
+football = Sport.create(sport_type: "Football", img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEEX7peJt2XziaC9IVftEVJh2HFXl9Bjtz4g&usqp=CAU", bg_img: "https://wallpaper.dog/large/10797629.jpg")
 
 puts "🌱🌱🌱 Seeding fields/courts..."
 field1 = Field.create(field_name: "Bushwick Inlet Park", img_url:"https://static01.nyt.com/images/2015/06/01/arts/02BUSHWICKPARKWEB/02BUSHWICKPARKWEB-superJumbo.jpg" )
