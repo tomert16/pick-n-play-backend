@@ -14,10 +14,8 @@ class MeetUpsController < ApplicationController
         render json: new_meet_up, status: :created
     end
 
-    
-
-    def drop_meet_up
-        render json: PlayerMeetUp.destroy_by(player_meet_up_params), status: :no_content
+    def join_meet_up
+        render json: PlayerMeetUp.create!(player_meet_up_params), status: :accepted
     end
 
     private 

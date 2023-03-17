@@ -3,8 +3,4 @@ class FieldWithMeetUpsSerializer < ActiveModel::Serializer
   
   has_many :meet_ups, serializer: MeetUpWithSportSerializer
 
-
-  # def teammates
-  #   object.meet_ups
-  # end
 end

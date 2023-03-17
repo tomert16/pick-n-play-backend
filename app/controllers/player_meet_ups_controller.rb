@@ -3,8 +3,14 @@ class PlayerMeetUpsController < ApplicationController
         render json: PlayerMeetUp.all, status: :ok
     end
 
-    def create
-        render json: PlayerMeetUp.create!(player_meet_up_params), status: :accepted
+    def show 
+        teammates = PlayerMeetUp.find_by!(id: params[:id])
+        render json: teammates
+    end
+
+
+    def destroy
+        render json: PlayerMeetUp.destroy_by(player_meet_up_params), status: :no_content
     end
 
     private
