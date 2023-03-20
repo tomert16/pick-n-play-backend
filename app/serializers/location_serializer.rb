@@ -1,5 +1,7 @@
 class LocationSerializer < ActiveModel::Serializer
   attributes :id, :state
 
-  # has_many :sports
+  # def sports
+  #   sports.sport_type
+  # end
 end

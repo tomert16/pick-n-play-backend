@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_201440) do
   create_table "fields", force: :cascade do |t|
     t.string "field_name"
     t.string "img_url"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -62,6 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_201440) do
     t.string "sport_type"
     t.string "img_url"
     t.string "bg_img"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
