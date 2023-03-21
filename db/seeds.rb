@@ -44,7 +44,7 @@ mia_field4= Field.create(field_name: "Founders Park", img_url: "https://sfmn.fiu
 mb_field1= Field.create(field_name: "Doug Shaw Memorial Stadium", img_url: "https://www.visitmyrtlebeach.com/sites/default/files/styles/listicle/public/legacy/images/DougShaw_70538ee0-b4df-4274-ae0f-d8bb1d930eb5.jpg.webp?itok=iDJHO4BW", location_id: sc.id)
 mb_field2= Field.create(field_name: "YMCA of Coastal Carolina", img_url: "https://fbiconstruction.com/wp-content/uploads/2018/05/Claire-Chapin-Epps-YMCA-1.jpg", location_id: sc.id)
 mb_field3= Field.create(field_name: "North Myrtle Beach Park and Sports Complex", img_url: "https://www.compasscove.com/media/images/MBSportsComplex.jpg", location_id: sc.id)
-mb_field4= Field.create(field_name: "X Gym Sports Mall", img_url: "https://lh5.googleusercontent.com/p/AF1QipNMv_k6ydsjDwmmXX1kwrwpVHL68Vg_UsDnaDw=w408-h254-k-no", location_id: sc.id)
+mb_field4= Field.create(field_name: "X Gym Sports Mall", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeiF7R8mQ8CyCgeO9WAmxvBTe0zhvZmMvguaUcOLgDU8ACB1qj_hRYFWsJIjFfkH8-wA0&usqp=CAU", location_id: sc.id)
 
 # puts "🌱🌱🌱seeding location_sports..."
 # ny_sp1 = LocationSport.create(location_id: ny.id, sport_id: soccer.id)
