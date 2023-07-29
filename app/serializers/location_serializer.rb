@@ -3,4 +3,5 @@ class LocationSerializer < ActiveModel::Serializer
 
   has_many :sports
   has_many :fields
+  
 end

@@ -17,6 +17,10 @@ class PlayersController < ApplicationController
         render json: player, serializer: IndividualPlayerSerializer
     end
     
+    def update
+        player_update = current_user.update!(location: params[:location])
+        render json: player_update, status: :accepted
+    end
 
     def me
         render json: current_user,  serializer: IndividualPlayerSerializer, status: :ok

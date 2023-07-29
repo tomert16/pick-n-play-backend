@@ -56,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_201440) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
+    t.json "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
