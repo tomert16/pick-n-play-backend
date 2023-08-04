@@ -6,12 +6,12 @@ Location.destroy_all
 
 
 puts "🧍‍♂️🧍‍♀️ Seeding players..."
-joey = Player.create!(first_name: "Joey", last_name: "B", email: "joey@gmail.com", password: "joey123") 
-kevin = Player.create(first_name: "Kevin", last_name: "Mak", email: "kevin@gmail.com", password: "1234")
-dan = Player.create(first_name: "Daniel", last_name: "Yim", email: "dan@gmail.com", password: "800yd")
-avi = Player.create(first_name: "Avi", last_name: "R", email: "avi@gmail.com", password: "920ra")
-olivia = Player.create(first_name: "Olivia", last_name: "Radick", email: "olivia@gmail.com", password: "210ro")
-tomer = Player.create(first_name: "Tomer", last_name: "Tal", email: "tomer@gmail.com", password: "610tt")
+joey = Player.create!(first_name: "Joey", last_name: "B", email: "joey@gmail.com", password: "joey123", location: nil) 
+kevin = Player.create(first_name: "Kevin", last_name: "Mak", email: "kevin@gmail.com", password: "1234", location: nil)
+dan = Player.create(first_name: "Daniel", last_name: "Yim", email: "dan@gmail.com", password: "800yd", location: nil)
+avi = Player.create(first_name: "Avi", last_name: "R", email: "avi@gmail.com", password: "920ra", location: nil)
+olivia = Player.create(first_name: "Olivia", last_name: "Radick", email: "olivia@gmail.com", password: "210ro", location: nil)
+tomer = Player.create(first_name: "Tomer", last_name: "Tal", email: "tomer@gmail.com", password: "610tt", location: nil)
 
 puts "🏙️🌄 seeding locations..."
 ny = Location.create(state: "New York City, New York", img_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHgPELUokxuHI11i4Ai44hR6JSZoUqG8UKeA&usqp=CAU")

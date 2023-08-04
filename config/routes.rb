@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :requests
   resources :locations
   resources :player_meet_ups
   resources :meet_ups
@@ -16,7 +17,4 @@ Rails.application.routes.draw do
   get '/me', to: 'players#me'
   ## POST route to join a meet up
   post '/join_meet_up', to: 'meet_ups#join_meet_up'
-  ## DELETE route to leave a meet up
-  # delete '/drop_meet_up/:id', to: 'meet_ups#drop_meet_up'
-  # post '/set_location', to: 'players#set_location'
 end

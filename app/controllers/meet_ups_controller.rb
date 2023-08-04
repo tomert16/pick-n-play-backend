@@ -15,7 +15,9 @@ class MeetUpsController < ApplicationController
     end
 
     def join_meet_up
-        render json: PlayerMeetUp.create!(player_meet_up_params), status: :accepted
+        join = PlayerMeetUp.create!(player_meet_up_params)
+        join = PlayerMeetUp.includes(:player).find(join.id)
+        render json: join, status: :accepted
     end
 
     private 
