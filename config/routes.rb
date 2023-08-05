@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :player_meet_ups
   resources :meet_ups
   resources :fields
-  resources :sports, only: [:index, :show]
+  resources :sports, only: [:index, :show, :create]
   resources :players
   
   ## POST route for signup

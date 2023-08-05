@@ -12,4 +12,15 @@ class SportsController < ApplicationController
         sport = Sport.find_by!(id: params[:id])
         render json: sport, serializer: SportWithMeetupsSerializer
     end
+
+    def create 
+        new_sport = Sport.create!(sport_params)
+        render json: new_sport, status: :created
+    end
+
+    private
+
+    def sport_params
+        params.permit(:sport_type, :img_url, :bg_img, :location_id)
+    end
 end
